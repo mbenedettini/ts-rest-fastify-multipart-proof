@@ -1,0 +1,20 @@
+{
+  "name": "ts-rest-fastify-multipart-proof",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/multipart": "^8.2.0",
+    "@ts-rest/core": "^3.45.1",
+    "@ts-rest/fastify": "^3.45.1",
+    "fastify": "^4.26.2",
+    "ts-node": "^10.9.2",
+    "zod": "^3.23.5"
+  }
+}
