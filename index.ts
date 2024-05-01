@@ -1,12 +1,13 @@
 import Fastify from 'fastify';
 import { initServer } from '@ts-rest/fastify';
 import { initContract } from '@ts-rest/core';
-import FastifyMultipart from "@fastify/multipart";
+import FastifyMultipart, { MultipartFile } from "@fastify/multipart";
 
 const c = initContract();
 
 const BodySchema = c.type<{
   requiredField: string,
+  file: MultipartFile,
 }>();
 
 const contract = c.router({
@@ -24,7 +25,7 @@ const contract = c.router({
 });
 
 const app = Fastify();
-app.register(FastifyMultipart);
+app.register(FastifyMultipart, { attachFieldsToBody: 'keyValues'});
 
 const s = initServer();
 
